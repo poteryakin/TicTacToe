@@ -57,7 +57,7 @@ function Controller() {
             text_turn.innerText = `${getActivePlayer().name} win`;
         }
         else if (board.getBoard().every(row => row.every(item => item.getValue() != ''))) {
-            console.log('Draw');
+            text_turn.innerText = `Draw`;
         }
         else {
             switchActivePlayer();
@@ -79,7 +79,7 @@ function Controller() {
         }
         if ((board.getBoard()[0][0].getValue() == board.getBoard()[1][0].getValue() && board.getBoard()[1][0].getValue() == board.getBoard()[2][0].getValue() && board.getBoard()[0][0].getValue() != '') ||
             (board.getBoard()[0][1].getValue() == board.getBoard()[1][1].getValue() && board.getBoard()[1][1].getValue() == board.getBoard()[2][1].getValue() && board.getBoard()[0][1].getValue() != '') ||
-            (board.getBoard()[2][0].getValue() == board.getBoard()[2][1].getValue() && board.getBoard()[2][1].getValue() == board.getBoard()[2][2].getValue() && board.getBoard()[2][0].getValue() != '')) {
+            (board.getBoard()[0][2].getValue() == board.getBoard()[1][2].getValue() && board.getBoard()[1][2].getValue() == board.getBoard()[2][2].getValue() && board.getBoard()[0][2].getValue() != '')) {
             return true;
         }
 
@@ -99,7 +99,7 @@ function Controller() {
 function clickCells() {
     const cellIndexRow = this.getAttribute('data-row');
     const cellIndexColumn = this.getAttribute('data-column');
-    if (this.innerText == '') {
+    if (this.innerText == '' && text_turn.innerText != `${game.getActivePlayer().name} win`) {
         this.innerText = game.getActivePlayer().marker;
         game.playRound(cellIndexRow, cellIndexColumn);
     }
