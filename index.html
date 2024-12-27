@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>TicTacToe</title>
+</head>
+<body>
+    <main id="main">
+        <header>
+            <div id="text-project">Tic Tac Toe</div>
+        </header>
+        <form id="players">
+            <label class="form-label" for="player1">Player 1:</label>
+            <input class="form-input" type="text" name="player1" id="player1_input" required>
+            <label class="form-label" for="player2">Player 2:</label>
+            <input class="form-input" type="text" name="player2" id="player2_input" required>
+            <button id="start-game" type="submit">Start Game</button>
+        </form>
+        <section id="game">
+            <div id="text-turn"></div>
+            <table id="board">
+                <tr>
+                    <td class="cell" data-row="0" data-column="0"></td>
+                    <td class="cell" data-row="0" data-column="1"></td>
+                    <td class="cell" data-row="0" data-column="2"></td>
+                </tr>
+                <tr>
+                    <td class="cell" data-row="1" data-column="0"></td>
+                    <td class="cell" data-row="1" data-column="1"></td>
+                    <td class="cell" data-row="1" data-column="2"></td>
+                </tr>
+                <tr>
+                    <td class="cell" data-row="2" data-column="0"></td>
+                    <td class="cell" data-row="2" data-column="1"></td>
+                    <td class="cell" data-row="2" data-column="2"></td>
+                </tr>
+            </table>
+        </section>
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+:root {
+    --bg: #1a1f25;
+    --elem-color: #e6b333;
+    --color_border: #22272d;
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg);
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#text-project {
+    font-size: 3rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: var(--elem-color);
+}
+
+.cell {
+    width: 15vw;
+    height: 25vh;
+    border: 1px solid #333;
+    text-align: center;
+    font-size: 36px;
+    cursor: pointer;
+    font-size: 10rem;
+    color: var(--elem-color);
+}
+
+#text-turn {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: var(--elem-color);
+    font-size: 1.2rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#start-game {
+    color: white;
+    background-color: var(--elem-color);
+    border: none;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    height: 2.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#game {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-input {
+    height: 25px;
+    border-radius: 5px;
+    border: 2px solid #333;
+    background-color: var(--bg);
+    color: var(--elem-color);
+    text-align: center;
+}
+
+input:focus {
+    border: 2px solid var(--elem-color);
+    outline: none;
+}
+
+.form-label {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: var(--elem-color);
+    font-size: 1.2rem;
+}
+
+#players {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
